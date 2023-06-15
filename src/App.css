@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+#menu::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -25px;
+  width: 70px;
+  height: 3px;
+  background: #22c55e;
+}
+
+#profile-img {
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.filter-list {
+  @apply pt-4 pb-5 border-b border-gray-200;
+}
+.filter-list__head {
+  @apply block text-base font-semibold mb-2;
+}
+.filter-list--form-control {
+  @apply grid grid-cols-2 gap-y-1;
+}
+.filter-list input[type="checkbox"] {
+  margin-right: 0.5rem;
+  filter: hue-rotate(260deg);
+  cursor: pointer;
+}
+.filter-list label {
+  @apply text-sm text-gray-500 cursor-pointer;
+}
+
+.search-div {
+  @apply border-gray-200 flex-1 relative;
+}
+.search-i {
+  @apply absolute top-1/2 left-6 text-gray-400 text-lg -translate-y-1/2;
+}
+.search-input {
+  @apply w-full h-full placeholder:text-gray-400 pl-14 outline-0 pr-2 py-4   !important;
+}
+
+.job-list {
+  @apply before:content-[''] before:absolute before:top-1/2 before:-left-4 before:-translate-y-1/2 before:w-1 before:h-1 before:rounded-full before:bg-gray-400 relative;
+}
+.job-list p {
+  @apply whitespace-nowrap text-ellipsis overflow-hidden;
+}
+
+.filter-sm-list {
+  @apply py-2 px-2 border rounded-lg cursor-pointer shadow-sm;
+}
+
+#job-filter::-webkit-scrollbar {
+  display: none;
+}
+
+.job-details--span {
+  @apply pr-3;
+}
+
+/**/
+.input-error {
+  @apply border border-red-500 !important;
+}
