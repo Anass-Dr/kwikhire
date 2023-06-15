@@ -69,7 +69,7 @@ function App() {
         <JSearchContextProvider query={query} filter={filter}>
           <Routes>
             <Route
-              path="/"
+              path="/kwikhire"
               exact
               element={
                 <Jobs
@@ -79,7 +79,7 @@ function App() {
                 />
               }
             />
-            <Route path="/jobs/:name" element={<Job />} />
+            <Route path="/kwikhire/jobs/:name" element={<Job />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </JSearchContextProvider>
